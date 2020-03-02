@@ -40,7 +40,7 @@ footer {
     position: fixed;
     left:0;
     bottom:0;
-    width:100%;
+    width:98%;
     height:3rem;
     background-color: white;
 
@@ -70,6 +70,9 @@ a:visited{
 .main {
     min-height: 30rem;
     background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
 }
 
 .ghost {
@@ -77,14 +80,14 @@ a:visited{
     font-family: Cambria;
     font-weight: bold;
     text-align: left;
-    border-style: double;
+    border-style: none;
     padding-left: 20px;
     padding-bottom: 5px;
     padding-top: 5px;
     position: relative;
     left:0;
     bottom:0;
-    width:100%;
+    width:90%;
     height:3rem;
     background-color: white;
 
