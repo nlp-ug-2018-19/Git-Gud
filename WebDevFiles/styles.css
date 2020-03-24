@@ -70,11 +70,9 @@ a:visited{
     text-decoration: none;
 }
 .main {
-    min-height: 30rem;
-    background-color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
+    background-color: whitesmoke;
+    text-indent:50px;
+    margin-top: 20px;
 }
 
 .ghost {
@@ -120,4 +118,17 @@ a:visited{
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+p {
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+p1 {
+display: block;
+padding-top: 50px;
+padding-left: 50px;
+padding-right: 50px;
 }
