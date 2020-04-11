@@ -1,9 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> N-grams </title>
-<h1> N-grams </h1>
-<p> Info about this tool will be updated later </p>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet"
+    type = "text/css"
+	href = "styles.css"/>
+	<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16"/>
+	<title>N-grams</title>
+</head>
 <body>
+	<div class="sidenav">
+	  <a href="Parser.html">Parser</a>
+	  <a href="Tagger.html">Tagger</a>
+	  <a href="N-grams.html">N-grams</a>
+	  <a href="#">Contact</a>
+	</div>
+	<header id="header_section">
+		<div class="logo">
+			<a id="logo_link" href="index.html">NLP Tools</a>
+		</div>
+	</header>
+
+	<div class="main">
+		<div class="action_menu">
+            <btn class="action_menu">N-gram</btn>
+            <select class="action_menu">
+                <option>2-grams</option>
+                <option>3-grams</option>
+                <option>4-grams</option>
+                <option>5-grams</option>
+            </select>
+        </div>
+        <!--"app" = some application; Here, it's an N'grammer-->
+		<div class="app">
+            <div class="half1">
+                <div class="input_output_div">
+                    Input
+                </div>
+                <textarea></textarea>
+            </div>
+            <div class="separator">
+				<br>
+				<br>
+				<br>
+				<br>
+				&#8594;
+            </div>
+            <div class="half2">
+                <div class="input_output_div">
+                    Output
+                </div>
+                <textarea></textarea>
+            </div>
+        </div>
+
+	</div>
+	<footer>
+		<div class="address_names">
+			<address>Authors:</address>
+			<address>&#8226;Adrianna Bałabańska</address>
+			<address>&#8226;Marcin Michnik</address>
+			<address>&#8226;Mateusz Wyszecki</address>
+			<address>&#8226;Wiktoria Romanowicz</address>
+		</div>
+		<div class="address_emails">
+			<address>&nbsp</address>
+			<address>(@)</address>
+			<address>(marcin.michnik@o2.pl)</address>
+			<address>(wyszecki.mateusz@gmail.com)</address>
+			<address>(@)</address>
+		</div>
+		
+		<div class="copy">
+			<address>&copy</address>
+		</div>
+	</footer>
+
+
+
 </body>
-<html> 
