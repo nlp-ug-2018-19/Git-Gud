@@ -1,12 +1,8 @@
-.container {
+body {
     background-color: #242019;
+    font-family: Cambria;
 }
-img {
-    width:100%;
-    max-width: 100%;
-    object-fit: contain;
-    opacity: 60%;
-}
+
 
 h1 {
     display:inline-block;
@@ -16,43 +12,59 @@ h1 {
 
 }
 header {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
-    font-family: Cambria;
     text-align: center;
-    border-style: double;
+    border-style: solid;
     margin-bottom: 5px;
     padding-bottom: 5px;
     max-height: 20rem;
-    background-color: white;
+    background-color: whitesmoke;
     background-position-y: -55px;
     margin-left: 160px;
 }
 
-footer {
-    font-size: 15px;
-    font-family: Cambria;
-    font-weight: bold;
-    text-align: left;
-    border-style: solid;
-    border-color: #242019;
-    padding-left: 20px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    position: fixed;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:3rem;
-    background-color: white;
-    margin-left: 160px;
+.title_text {
+    text-align: center;
+    font-size: 30px;
 }
+
+.regular_text {
+    text-indent: 70px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: bold;
+    border-style: solid;
+    background-color: whitesmoke;
+    margin-left: 160px;
+    margin-top: 10px;
+}
+
+.address_names {
+    padding: 10px;
+}
+.address_emails {
+    padding: 10px;
+    width: 63%;
+}
+
+.copy {
+    font-size: 70px;
+    width: 20%;
+    text-align: center;
+    padding-bottom: 7px;
+}
+
 button{
     width: 200px;
     font-family: verdana;
     font-size: 20px;
     font-weight: bold;
-    background-color:white;
+    background-color:whitesmoke;
     border-color: gray;
 }
 button:hover{
@@ -68,17 +80,6 @@ a{
 a:visited{
     color: black;
     text-decoration: none;
-}
-.main {
-    background-color: whitesmoke;
-    text-indent:50px;
-    margin-top: 20px;
-}
-
-.ghost {
-    border-style: none;
-    position: relative;
-    width:10px;
 }
 
 /* The sidebar menu */
@@ -105,14 +106,26 @@ a:visited{
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: whitesmoke;
 }
 
 /* Style page content */
 .main {
   margin-left: 160px; /* Same as the width of the sidebar */
   padding: 0px 10px;
+  background-color: whitesmoke;
+  margin-top: 10px;
+  border-style: solid;
+  height: 500px;
 }
+
+.main_index {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    background-color: whitesmoke;
+    margin-top: 10px;
+    border-style: solid;
+  }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
@@ -126,9 +139,68 @@ p {
     padding-right: 50px;
   }
 
-p1 {
-display: block;
-padding-top: 50px;
-padding-left: 50px;
-padding-right: 50px;
+/* N-gram page*/
+.app {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    margin-bottom: 10px;
+    height: 80%;
+}
+
+.action_menu {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+select {
+    background-color: whitesmoke;
+}
+
+btn {
+    font-weight: bold;
+    border-style: solid;
+}
+
+btn:hover {
+    cursor: pointer;
+    background-color: rgb(223, 223, 223);
+}
+
+select:hover {
+    cursor: pointer;
+    background-color: rgb(223, 223, 223);
+}
+
+.half1 {
+    border-right: solid;
+    width: 48%;
+}
+.half2 {
+    border-left: solid;
+    width: 48%;
+}
+
+.input_output_div {
+    border-bottom: solid;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+textarea {
+    border-style: solid;
+    width: 98.85%;
+
+    background-color: whitesmoke;
+    height: 75%;
+}
+
+.separator {
+    width:4%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
 }
