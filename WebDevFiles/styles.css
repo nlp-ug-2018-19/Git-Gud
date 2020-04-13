@@ -83,7 +83,7 @@ footer {
     font-weight: bold;
     background-color: whitesmoke;
     margin-left: 160px;
-    margin-top: 10px;
+
 }
 
 .address_names {
@@ -154,15 +154,24 @@ a:visited {
 }
 
 
-.main {
+.main_content {
   margin-left: 160px;
   padding: 0px 10px;
+  height: 100%;
 }
 
-.main_index {
+
+.main_index_wrap {
     position: relative;
     background-color: whitesmoke;
-  }
+    margin-top: 17px;
+}
+
+.main_app_wrap {
+    position: relative;
+    background-color: whitesmoke;
+    margin-top: 17px;
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
@@ -176,14 +185,16 @@ a:visited {
     display: flex;
     flex-direction: row;
     border-style: solid;
-    margin-bottom: 10px;
-    height: 80%;
+    height: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .action_menu {
     font-size: 1.5rem;
-    text-align: center;
+    text-align: right;
     padding: 10px;
+    margin-right: 5px;
 }
 
 select {
@@ -223,10 +234,9 @@ select:hover {
 }
 
 textarea {
-    border-style: solid;
-    width: 98.85%;
+    width: 98.4%;
     background-color: whitesmoke;
-    height: 75%;
+    height: 89.6%;
 }
 
 .separator {
