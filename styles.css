@@ -1,0 +1,276 @@
+body {
+    background-color: #333333;
+    font: normal .80em 'trebuchet ms', arial, sans-serif;
+}
+.content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+p {
+line-height: 1.7em;
+display: block;
+padding-left: 50px;
+padding-right: 50px;
+}
+
+h1 { 
+    padding: 0 0 5px 0;
+    line-height: 1.7em;
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+header {
+    position: relative;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    justify-content: center;
+    max-height: 20rem;
+    background-color: whitesmoke;
+    height: 130px;
+    padding-top: 25px;
+}
+
+#menubar{ 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    padding: 0;
+    background:#706c61;
+}
+
+ul#menu, ul#menu li { 
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+ul#menu li { 
+    list-style: none;
+} 
+
+ul#menu li a { 
+    letter-spacing: 0.1em;
+    font: normal 12px arial, sans-serif;
+    display: block; 
+    float: left; 
+    height: 17px;
+    margin: 10px 0 0 10px;
+    padding: 9px 26px 6px 26px;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+} 
+
+ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover { 
+    color: #FFF;
+    background: black;
+}
+
+.regular_text {
+    text-indent: 40px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: whitesmoke;
+    margin-left: 160px;
+
+}
+
+.address_names {
+    padding: 10px;
+}
+
+.address_emails {
+    padding: 10px;
+    width: 63%;
+}
+
+.copy {
+    font-size: 70px;
+    width: 20%;
+    text-align: center;
+    padding-bottom: 7px;
+}
+
+button {
+    width: 200px;
+    font-family: verdana;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:#eae7d9;
+    border-color: #d2c6b2;
+}
+
+button:hover {
+    background-color:#d2c6b2;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color:black;
+    border-color: black;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.sidenav {
+    position: absolute;
+    height: 100%;
+    width: 160px;
+    float: left;
+    background-color: #706c61;
+    letter-spacing: 0.1em;
+    font: normal 12px arial, sans-serif;
+    color: #FFF;
+}
+
+.sidenav a {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    text-shadow: 2px 2px 2px black;
+    color:whitesmoke;
+    display: block;
+    top: 0;
+    bottom: 0;
+}
+
+.sidenav a:hover {
+    color: #eae7d9;
+}
+
+
+.main_content {
+  margin-left: 160px;
+  padding: 0px 10px;
+  height: 100%;
+}
+
+
+.main_index_wrap {
+    position: relative;
+    background-color: whitesmoke;
+    margin-top: 17px;
+}
+
+.main_app_wrap {
+    position: relative;
+    background-color: whitesmoke;
+    margin-top: 17px;
+}
+
+/* RESPOSIVITY FOR MAX 820x420 -> most iphones and other big smartphone screens */
+@media screen and (max-height: 820px) and (max-width: 420px) {
+  .sidenav {padding-top: 15px;
+            width: 80px;}
+  .sidenav a {font-size: 14px;
+              padding-left: 0;}
+  #menubar {height: 30px;}        
+  ul#menu li a { font: normal 10px arial, sans-serif;
+                 height: 12px;
+                 margin: 0px 0px 12px 0px;
+                 padding: 3px 3px 2px 3px;}
+  h1 {font-size: 12px;
+      padding-left: 10;
+      padding-right: 10;
+      padding-top: 5;
+      text-align: justify;}
+  .main_content { margin-left: 30px;
+                  margin-right: -50px;}
+  p {font-size: 9px;
+     text-align: justify;}
+  header {font-size: 40px;
+          height:90px;}
+  footer {display: none;}
+    
+}
+/* RESPOSIVITY FOR MAX 820x420 -> most iphones and other big smartphone screens */
+
+
+
+
+
+
+/* N-gram page*/
+.app {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    height: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.action_menu {
+    font-size: 1.5rem;
+    text-align: right;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+select {
+    background-color: whitesmoke;
+}
+
+btn {
+    font-weight: bold;
+    border-style: solid;
+}
+
+btn:hover {
+    cursor: pointer;
+    background-color: rgb(223, 223, 223);
+}
+
+select:hover {
+    cursor: pointer;
+    background-color: rgb(223, 223, 223);
+}
+
+.half1 {
+    border-right: solid;
+    width: 48%;
+}
+.half2 {
+    border-left: solid;
+    width: 48%;
+}
+
+.input_output_div {
+    border-bottom: solid;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+textarea {
+    width: 98.4%;
+    background-color: whitesmoke;
+    height: 89.6%;
+}
+
+.separator {
+    width:4%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+}
