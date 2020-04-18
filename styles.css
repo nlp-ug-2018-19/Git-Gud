@@ -1,12 +1,10 @@
 body {
     background-color: #333333;
     font: normal .80em 'trebuchet ms', arial, sans-serif;
-    
 }
 .content {
     max-width: 1000px;
     margin: auto;
-    
 }
 
 p {
@@ -16,24 +14,32 @@ padding-left: 50px;
 padding-right: 50px;
 }
 
+#logo_link {
+    color: whitesmoke;
+}
+
 h1 { 
-    padding: 0 0 5px 0;
+    padding: 5px 5px 5px 5px;
     line-height: 1.7em;
     display: block;
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 20px;
+    text-align: justify;
+    font-size: 16px;
+    border-bottom-style: groove;
+    border-bottom-width: thin;
+    
 }
 
 header {
     position: relative;
     font-size: 50px;
     font-weight: bold;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 3px 3px 3px black;
     text-align: center;
     justify-content: center;
     max-height: 20rem;
-    background-color: whitesmoke;
+    background-image: url(https://api.time.com/wp-content/uploads/2020/01/artificial-intelligence-white-collar.-work.jpg);
     height: 130px;
     padding-top: 25px;
 }
@@ -48,9 +54,12 @@ header {
 }
 
 ul#menu, ul#menu li { 
-    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
     margin: 0;
-    padding: 0;
+    padding-left: 60px;
+    
 }
 
 ul#menu li { 
@@ -74,11 +83,12 @@ ul#menu li a {
 
 ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover { 
     color: #FFF;
-    background: black;
+    background: rgba(0, 0, 0, 0.747);
 }
 
 .regular_text {
     text-indent: 40px;
+    
 }
 
 footer {
@@ -123,7 +133,7 @@ button:hover {
 a {
     text-decoration: none;
     color:black;
-    border-color: black;
+    border-color: whitesmoke;
 }
 
 a:visited {
@@ -185,16 +195,24 @@ a:visited {
             width: 80px;}
   .sidenav a {font-size: 14px;
               padding-left: 0;}
-  #menubar {height: 30px;}        
-  ul#menu li a { font: normal 10px arial, sans-serif;
-                 height: 12px;
-                 margin: 0px 0px 12px 0px;
-                 padding: 3px 3px 2px 3px;}
+  #menubar {
+      display: none;
+  }
+  .month {
+      display: none;
+  }
+  .days {
+      display: none;
+  }
+  .weekdays {
+      display:none;
+}
   h1 {font-size: 12px;
       padding-left: 10;
       padding-right: 10;
       padding-top: 5;
-      text-align: justify;}
+      text-align: justify;
+    }
   .main_content { margin-left: 30px;
                   margin-right: -50px;}
   p {font-size: 9px;
@@ -202,6 +220,7 @@ a:visited {
   header {font-size: 40px;
           height:90px;}
   footer {display: none;}
+
     
 }
 /* RESPOSIVITY FOR MAX 820x420 -> most iphones and other big smartphone screens */
@@ -228,6 +247,10 @@ a:visited {
     margin-right: 5px;
 }
 
+select {
+    background-color: whitesmoke;
+}
+
 btn {
     font-weight: bold;
     border-style: solid;
@@ -236,10 +259,6 @@ btn {
 btn:hover {
     cursor: pointer;
     background-color: rgb(223, 223, 223);
-}
-
-select {
-    background-color: whitesmoke;
 }
 
 select:hover {
@@ -275,4 +294,73 @@ textarea {
     text-align: center;
     font-weight: bold;
     font-size: 200%;
+}
+
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Calendar on the sidebar */
+.month {
+  padding: 0;
+  width: 100%;
+  background: #04647c;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 11%;
+  color: #666;
+  text-align: right;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 11%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 3px;
+  background: #04647c;
+  color: white !important
 }
