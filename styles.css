@@ -1,10 +1,12 @@
 body {
     background-color: #333333;
     font: normal .80em 'trebuchet ms', arial, sans-serif;
+    
 }
 .content {
     max-width: 1000px;
     margin: auto;
+    
 }
 
 p {
@@ -226,10 +228,6 @@ a:visited {
     margin-right: 5px;
 }
 
-select {
-    background-color: whitesmoke;
-}
-
 btn {
     font-weight: bold;
     border-style: solid;
@@ -238,6 +236,10 @@ btn {
 btn:hover {
     cursor: pointer;
     background-color: rgb(223, 223, 223);
+}
+
+select {
+    background-color: whitesmoke;
 }
 
 select:hover {
