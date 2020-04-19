@@ -45,6 +45,10 @@ p {
     text-align: justify;
     display: block;
 }
+.responsive {
+    width: 100%;
+    height: auto;
+  }  
 header {
     position: relative;
     font-size: 50px;
