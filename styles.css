@@ -28,9 +28,23 @@ h1 {
     font-size: 16px;
     border-bottom-style: groove;
     border-bottom-width: thin;
-    
 }
-
+h2 { 
+    font: bold 15px arial, sans-serif;
+    line-height: 2em;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify; 
+    display: block;
+}
+p { 
+    font: normal 13px arial, sans-serif;
+    line-height: 2em;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+    display: block;
+}
 header {
     position: relative;
     font-size: 50px;
@@ -56,8 +70,11 @@ header {
 
 ul#menu, ul#menu li { 
     display: inline-block;
+    display: table-cell;
+    vertical-align: right;
     margin: 0;
-    
+    padding: 0;
+    padding-left: 60px;
 }
 
 ul#menu li { 
@@ -90,9 +107,9 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover {
 }
 
 footer {
+    font: 12px arial, sans-serif;
     display: flex;
     flex-direction: row;
-    font-size: 12px;
     font-weight: bold;
     background-color: whitesmoke;
     margin-left: 160px;
