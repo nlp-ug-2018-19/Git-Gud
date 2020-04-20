@@ -1,15 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel = "stylesheet"
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet"
     type = "text/css"
-    href = "styles.css"/>
-    </head>
-<title> Contact </title>
-<h1> Contact Info </h1>
-<p> Please, in order to get more information don't hesistate to contact us:
-    e-mail adresses will be updated soon.
-     </p>
+	href = "styles.css"/>
+	<link rel="icon" type="image/png" href="favicon.png" sizes="64x64"/>
+	<title>N-grams</title>
+</head>
 <body>
+	<div class="content">
+		<header id="header_section">
+			<div class="logo">
+				<a id="logo_link" href="index.html">NLP Tools</a>
+			</div>
+			<div id="menubar">
+				<ul id="menu">
+					<li class="selected"><a href="index.html">Home</a></li>
+					<li class="dropdown">
+						<a href="Parser.html" class="dropbtn">Parser</a>
+						<div class="dropdown-content" >
+							<a href="Parser.html" class="pars">Parser</a>
+							<a href="Parsercode.html" class="pars">Code</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="Tagger.html" class="dropbtn">Tagger</a>
+						<div class="dropdown-content" id="tag">
+							<a href="Tagger.html" class="tag">Tagger</a>
+							<a href="Taggercode.html" class="tag">Code</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="N-grams.html" class="dropbtn">N-grams</a>
+						<div class="dropdown-content" id="ngram">
+							<a href="N-grams.html" class="ngram">N-grams</a>
+							<a href="N-gramscode.html" class="ngram">Code</a>
+						</div>
+					</li>
+					<li><a href="Contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="main_app_wrap">
+			<div class="sidenav">
+				<div class="calendar">
+					<div class="month">
+						<ul>
+						<li class="prev">&#10094;</li>
+						<li class="next">&#10095;</li>
+						<li>April</li>
+						<li>2020</li>
+						</ul>
+					</div>
+
+					<div>
+					<ul class="weekdays">
+						<li>Mo</li>
+						<li>Tu</li>
+						<li>We</li>
+						<li>Th</li>
+						<li>Fr</li>
+						<li>Sa</li>
+						<li>Su</li>
+					</ul>
+					
+					<ul class="days">
+						<li></li>
+						<li></li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>10</li>
+						<li>11</li>
+						<li>12</li>
+						<li>13</li>
+						<li>14</li>
+						<li>15</li>
+						<li>16</li>
+						<li>17</li>
+						<li>18</li>
+						<li>19</li>
+						<li><span class="active">20</span></li>
+						<li>21</li>
+						<li>22</li>
+						<li>23</li>
+						<li>24</li>
+						<li>25</li>
+						<li>26</li>
+						<li>27</li>
+						<li>28</li>
+						<li>29</li>
+						<li>30</li>
+					</ul>
+					</div>
+				</div>	
+			</div>
+			<div class="main_content">
+				<div class="container">
+                    <form action="#">
+                  
+                      <label for="fname">First Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  
+                      <label for="lname">Last Name</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  
+                      <label for="country">Country</label>
+                      <select id="country" name="country">
+                        <option value="poland">Poland</option>
+                        <option value="usa">USA</option>
+                      </select>
+                  
+                      <label for="subject">Subject</label>
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  
+                      <input type="submit" value="Submit">
+                  
+                    </form>
+				</div>
+			</div>
+			<footer>
+				<div class="address_names">
+					<hr>
+					<address><b>Authors:</b></address>
+					<address>Adrianna Bałabańska</address>
+					<address>Marcin Michnik</address>
+					<address>Mateusz Wyszecki</address>
+					<address>Wiktoria Romanowicz</address>
+				</div>
+				<div class="address_emails">
+					<address>&nbsp</address>
+					<address>&nbsp</address>
+					<address>(adrianna.balabanska@gmail.com)</address>
+					<address>(marcin.michnik@o2.pl)</address>
+					<address>(wyszecki.mateusz@gmail.com)</address>
+					<address>(wiktoria.romanowicz@gmail.com)</address>
+				</div>
+				
+				<div class="copy">
+					<address>&copy</address>
+				</div>
+			</footer>
+		</div>
+	</div>
 </body>
-<html> 
