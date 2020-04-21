@@ -96,8 +96,8 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover {
     background: #166D89;
 }
 
-.regular_text {
-    text-indent: 40px;
+.regular_text h1, .regular_text h2, .regular_text p   {
+    text-align: center;
     
 }
 
@@ -125,6 +125,7 @@ footer {
     width: 20%;
     text-align: center;
     padding-bottom: 7px;
+    padding-top: 24px;
 }
 
 button {
