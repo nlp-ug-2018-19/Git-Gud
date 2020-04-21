@@ -505,7 +505,7 @@ pre .cl {
 }
 /* Contact subpage*/
 
-input[type=text], select, textarea {
+input[type=text], textarea {
     width: 100%; 
     padding: 12px; 
     border: 1px solid #ccc; 
@@ -513,7 +513,8 @@ input[type=text], select, textarea {
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical 
+    
   }
   
   input[type=submit] {
