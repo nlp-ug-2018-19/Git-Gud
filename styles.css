@@ -103,30 +103,34 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover {
 
 footer {
     font: 12px arial, sans-serif;
-    display: flex;
-    flex-direction: row;
     /* font-weight: bold; */
     background-color: white;
     margin-left: 160px;
+}
 
+.addresses {
+    width: 435px;
+}
+
+.address_wrap {
+    text-align: left;
+    padding: 3px;
+    
 }
 
 .address_names {
-    padding: 10px;
+    display: inline-block;
+    padding: 3px;
+    padding-left: 10px;
+    width: 160px;
 }
 
 .address_emails {
-    padding: 10px;
-    width: 50%;
+    display: inline-block;
+    padding: 3px;
+    width: 160px;
 }
 
-.copy {
-    font-size: 70px;
-    width: 20%;
-    text-align: center;
-    padding-bottom: 7px;
-    padding-top: 24px;
-}
 
 button {
     width: 200px;
