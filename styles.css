@@ -114,20 +114,20 @@ footer {
 
 .address_wrap {
     text-align: left;
-    padding: 3px;
+    padding: 2px;
     
 }
 
 .address_names {
     display: inline-block;
-    padding: 3px;
+    padding: 2px;
     padding-left: 10px;
     width: 160px;
 }
 
 .address_emails {
     display: inline-block;
-    padding: 3px;
+    padding: 2px;
     width: 160px;
 }
 
