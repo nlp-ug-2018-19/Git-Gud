@@ -262,10 +262,6 @@ a:visited {
     margin-right: 5px;
 }
 
-select {
-    background-color: whitesmoke;
-}
-
 btn {
     font-weight: bold;
     border-style: solid;
@@ -291,6 +287,7 @@ select:hover {
 }
 
 .input_output_div {
+    background-color: whitesmoke;
     border-bottom: solid;
     text-align: center;
     font-size: 36px;

@@ -1,3 +1,9 @@
+// Select html items and assign them to variables
+const input = document.querySelector(".input");
+const output = document.querySelector(".output");
+
+input.innerText = "Enter text here";
+
 // Select button - assign to a variable
 const btn = document.querySelector('.submit');
 
@@ -5,10 +11,6 @@ const btn = document.querySelector('.submit');
 btn.addEventListener('click', tag);
 
 function tag(e) {
-    // Select html items and assign them to variables
-    const input = document.querySelector(".input");
-    const output = document.querySelector(".output");
-
     // Assign the contents of the input textarea item to a variable
     let rawInputText = String(input.value);
 
