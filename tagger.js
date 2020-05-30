@@ -10,6 +10,106 @@ const btn = document.querySelector('.submit');
 // Add an event listener to the button
 btn.addEventListener('click', tag);
 
+var dict = {
+    "the": "art",
+    "be": "verb",
+    "to": "prep",
+    "of": "prep",
+    "and": "conj",
+    "a": "art",
+    "in": "prep",
+    "that": "conj",
+    "have": "verb",
+    "I": "pron",
+    "it": "prep",
+    "for": "prep",
+    "not": "adv",
+    "on": "prep",
+    "with": "prep",
+    "he": "pron",
+    "as": "adv",
+    "you": "pron",
+    "do": "verb",
+    "at": "prep",
+    "this": "det",
+    "but": "prep",
+    "his": "pron",
+    "by": "prep",
+    "from": "prep",
+    "they": "pron",
+    "we": "pron",
+    "say": "verb",
+    "her": "pron",
+    "she": "pron",
+    "or": "conj",
+    "an": "art",
+    "will": "verb",
+    "my": "pron",
+    "one": "noun",
+    "all": "adj",
+    "would": "verb",
+    "there": "adv",
+    "their": "pron",
+    "what": "pron",
+    "so": "conj",
+    "up": "adv",
+    "out": "prep",
+    "if": "conj",
+    "about": "prep",
+    "who": "pron",
+    "get": "verb",
+    "which": "pron",
+    "go": "verb",
+    "me": "pron",
+    "when": "adv",
+    "make": "verb",
+    "can": "verb",
+    "like": "prep",
+    "time": "noun",
+    "no": "det",
+    "just": "adj",
+    "him": "pron",
+    "know": "verb",
+    "take": "verb",
+    "people": "noun",
+    "into": "prep",
+    "year": "noun",
+    "your": "pron",
+    "good": "adj",
+    "some": "det",
+    "could": "verb",
+    "them": "pron",
+    "see": "verb",
+    "other": "adj",
+    "than": "conj",
+    "then": "adv",
+    "come": "verb",
+    "its": "pron",
+    "over": "prep",
+    "think": "verb",
+    "also": "adv",
+    "back": "noun",
+    "after": "prep",
+    "use": "verb",
+    "two": "noun",
+    "how": "adv",
+    "our": "pron",
+    "work": "verb",
+    "first": "adj",
+    "well": "adv",
+    "way": "noun",
+    "even": "adj",
+    "new": "adj",
+    "want": "verb",
+    "because": "conj",
+    "any": "pron",
+    "these": "pron",
+    "give": "verb",
+    "day": "noun",
+    "most": "adv",
+    "us": "pron"
+}
+
 function tag(e) {
     // Assign the contents of the input textarea item to a variable
     let rawInputText = String(input.value);
@@ -25,16 +125,23 @@ function tag(e) {
 
     // Assign words to result
     let result = Array();
-    for (let i = 0; i < words.length; i++) {
-        if (words[i]==="i") {
-            result.push("'" + words[i] + "'" + " (Noun)");
+    var temp = ""
+    for (let i=0; i <words.length; i++) {
+        if (words[i] in dict === true) {
+            let key=words[i];
+            let output = "'" + words[i] + "'" + ' : '+ "(" + String(dict[key]) + ")";
+            result.push(output);
         }
-        else if (words[i]==="you") {
-            result.push("'" + words[i] + "'" + " (Noun)");
+        else if (temp === "an" || temp === "the" || temp === "a") {
+            result.push("'" + words[i] + "'" + " : " + "(noun)");
+        }
+        else if ((temp == "is" || temp == "are") && words[i].substr(words[i].length - 3) === "ing") {
+            result.push("'" + words[i] + "'" + " : " + "(verb)");
         }
         else {
-            result.push("'" + words[i] + "'" + " (?)");
+            result.push("'" + words[i] + "'" + " : " + "(?)");
         }
+        temp = String(words[i])
     }
 
     // Turn the array into one string
