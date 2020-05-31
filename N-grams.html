@@ -18,13 +18,7 @@
         <div id="menubar">
             <ul id="menu">
                 <li class="selected"><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="Parser.html" class="dropbtn">Parser</a>
-                    <div class="dropdown-content">
-                        <a href="Parser.html" class="pars">Parser</a>
-                        <a href="Parsercode.html" class="pars">Code</a>
-                    </div>
-                </li>
+
                 <li class="dropdown">
                     <a href="Tagger.html" class="dropbtn">Tagger</a>
                     <div class="dropdown-content" id="tag">
@@ -123,14 +117,7 @@
                 </div>
 
                 <div class="separator">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    &#8594;
+
                 </div>
 
                 <div class="half2">
@@ -185,60 +172,7 @@
     </div>
 </div>
 
-<script>
-    function nGram() {
-        let e = document.getElementById("idSelect");
-        let n = e.options[e.selectedIndex].value;
-
-        grams();
-
-        function grams() {
-            let input = document.getElementById('input');
-            var value = input.value;
-
-            var splitTable = [];
-            var nGrams = []
-            var index
-
-            if (value === null || value === undefined) {
-                return nGrams
-            }
-
-            splitTable = value.split(' ');
-            index = splitTable.length - n + 1
-
-            if (index < 1) {
-                return nGrams
-            }
-
-            let i = 0;
-            if (n === '2') {
-                while (index--) {
-                    nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1];
-                    i++;
-                }
-            } else if (n === '3') {
-                while (index--) {
-                    nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2];
-                    i++;
-                }
-            } else if (n === '4') {
-                while (index--) {
-                    nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2] + ' ' + splitTable[i + 3];
-                    i++;
-                }
-            } else if (n === '5') {
-                while (index--) {
-                    nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2] + ' ' + splitTable[i + 3] + ' ' + splitTable[i + 4];
-                    i++;
-                }
-            }
-
-            let output = document.getElementById('output');
-            output.value = nGrams;
-        }
-    }
-</script>
+<script src="n-grammer.js"></script>
 
 </body>
 

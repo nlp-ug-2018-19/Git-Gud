@@ -18,6 +18,8 @@ padding-right: 50px;
     color: whitesmoke;
 }
 
+
+
 h1 { 
     padding: 5px 5px 5px 5px;
     line-height: 1.7em;
@@ -130,20 +132,23 @@ footer {
     padding: 2px;
     width: 160px;
 }
-
+.hamburger {
+    display:none;
+    color: white;
+}
 
 button {
-    width: 200px;
     font-family: verdana;
     font-size: 20px;
     font-weight: bold;
-    background-color:#eae7d9;
-    border-color: #d2c6b2;
+    background-color:rgb(6, 76, 116);
+    color: white;
+
 }
 
 button:hover {
-    background-color:#d2c6b2;
     cursor: pointer;
+    background-color:rgb(10, 107, 163);
 }
 a {
     text-decoration: none;
@@ -262,15 +267,11 @@ a:visited {
     margin-right: 5px;
 }
 
-btn {
+button {
     font-weight: bold;
     border-style: solid;
 }
 
-btn:hover {
-    cursor: pointer;
-    background-color: rgb(223, 223, 223);
-}
 
 select:hover {
     cursor: pointer;
@@ -448,6 +449,7 @@ pre {
     overflow-x: auto;
     white-space: pre-wrap;
     counter-reset: line;
+    padding-right: 200px;
 }
 
 pre:hover,
@@ -542,4 +544,21 @@ input[type=text], textarea {
 
   .app_textarea {
     margin-top: 0px; 
+}
+
+@media (max-width: 460px) {
+    .hamburger {
+        display: initial;
+        position: relative;
+        color: white;
+    }
+    .sidenav {
+        display:none;
+    }
+    .regular_text * {
+        padding-left:0px;
+    }
+    .main_content {
+        margin-left:0px;
+    }
 }

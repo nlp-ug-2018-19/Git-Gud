@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel = "stylesheet"
-    type = "text/css"
-	href = "styles.css"/>
-	<link rel="icon" type="image/png" href="favicon.png" sizes="64x64"/>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="icon" type="image/png" href="favicon.png" sizes="64x64" />
 	<title>NLP Tools</title>
 </head>
+
 <body>
 	<div class="content">
 		<header id="header_section">
@@ -18,13 +18,7 @@
 			<div id="menubar">
 				<ul id="menu">
 					<li class="selected"><a href="index.html">Home</a></li>
-					<li class="dropdown">
-						<a href="Parser.html" class="dropbtn">Parser</a>
-						<div class="dropdown-content" >
-							<a href="Parser.html" class="pars">Parser</a>
-							<a href="Parsercode.html" class="pars">Code</a>
-						</div>
-					</li>
+
 					<li class="dropdown">
 						<a href="Tagger.html" class="dropbtn">Tagger</a>
 						<div class="dropdown-content" id="tag">
@@ -49,193 +43,112 @@
 				<div class="calendar">
 					<div class="month">
 						<ul>
-						<li class="prev">&#10094;</li>
-						<li class="next">&#10095;</li>
-						<li>June</li>
-						<li>2020</li>
+							<li class="prev">&#10094;</li>
+							<li class="next">&#10095;</li>
+							<li>June</li>
+							<li>2020</li>
 						</ul>
 					</div>
 
 					<div>
-					<ul class="weekdays">
-						<li>Mo</li>
-						<li>Tu</li>
-						<li>We</li>
-						<li>Th</li>
-						<li>Fr</li>
-						<li>Sa</li>
-						<li>Su</li>
-					</ul>
-					
-					<ul class="days">
-						<li><span class="active">1</span></li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-						<li>5</li>
-						<li>6</li>
-						<li>7</li>
-						<li>8</li>
-						<li>9</li>
-						<li>10</li>
-						<li>11</li>
-						<li>12</li>
-						<li>13</li>
-						<li>14</li>
-						<li>15</li>
-						<li>16</li>
-						<li>17</li>
-						<li>18</li>
-						<li>19</li>
-						<li>20</li>
-						<li>21</li>
-						<li>22</li>
-						<li>23</li>
-						<li>24</li>
-						<li>25</li>
-						<li>26</li>
-						<li>27</li>
-						<li>28</li>
-						<li>29</li>
-						<li>30</li>
-					</ul>
+						<ul class="weekdays">
+							<li>Mo</li>
+							<li>Tu</li>
+							<li>We</li>
+							<li>Th</li>
+							<li>Fr</li>
+							<li>Sa</li>
+							<li>Su</li>
+						</ul>
+
+						<ul class="days">
+							<li><span class="active">1</span></li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>10</li>
+							<li>11</li>
+							<li>12</li>
+							<li>13</li>
+							<li>14</li>
+							<li>15</li>
+							<li>16</li>
+							<li>17</li>
+							<li>18</li>
+							<li>19</li>
+							<li>20</li>
+							<li>21</li>
+							<li>22</li>
+							<li>23</li>
+							<li>24</li>
+							<li>25</li>
+							<li>26</li>
+							<li>27</li>
+							<li>28</li>
+							<li>29</li>
+							<li>30</li>
+						</ul>
 					</div>
-				</div>	
+				</div>
 			</div>
 			<div class="main_content">
 				<div class="regular_text">
-				<div class="col-lg-12">
-				<h1>Sample code for Parser/Tager/N-grams</h1>
-				<div class="code">
-				<pre><span id='code2'>
-import operator
-from collections import Counter
-import matplotlib.pyplot as plt
-import re
-from twitter_scraper import get_tweets
+					<div class="col-lg-12">
+						<h1>Sample code for Parser/Tager/N-grams</h1>
+						<div class="code">
+							<pre>
+								<span id='code2'>
+									function tag(e) {
+										// Assign the contents of the input textarea item to a variable
+										let rawInputText = String(input.value);
+									
+										// Process the text to lower case
+										rawInputText = rawInputText.toLowerCase();
+									
+										// Remove special characters
+										rawInputText = rawInputText.replace(/,/g, " ");
+									
+										// Split the text into words
+										let words = rawInputText.split(" ");
+									
+										// Assign words to result
+										let result = Array();
+										var temp = ""
+										for (let i=0; i < words.length; i++) {
+											if (words[i] in dict === true) {
+												let key=words[i];
+												let output = "'" + words[i] + "'" + ' : '+ "(" + String(dict[key]) + ")";
+												result.push(output);
+											}
+											else if (temp === "an" || temp === "the" || temp === "a") {
+												result.push("'" + words[i] + "'" + " : " + "(noun)");
+											}
+											else if ((temp == "is" || temp == "are") && words[i].substr(words[i].length - 3) === "ing") {
+												result.push("'" + words[i] + "'" + " : " + "(verb)");
+											}
+											else {
+												result.push("'" + words[i] + "'" + " : " + "(?)");
+											}
+											temp = String(words[i])
+										}
+									
+										// Turn the array into one string
+										result = result.join(', ')
+									
+										// Show the results
+										output.innerText = result;
+									}
+								</span>
+							</pre>
+							<button class="codeButton" onclick="codeCopy('code2')">Copy</button>
+						</div>
 
-
-def readFile(path, split):
-	text = open(path, 'r')
-	if split == True:
-		textWords = text.read().split()
-	else:
-		textWords = text.read()
-	text.close()
-	return textWords
-
-
-def countWords(source, reference):
-	wordsNum = 0
-	source = map(str.lower, source)
-	for word in source:
-		if word in reference:
-			wordsNum += 1
-	return wordsNum
-
-
-def remStopwords(source, reference):
-	source = map(str.lower, source)
-	pureText = []
-	for word in source:
-		if word not in reference:
-			pureText.append(word)
-	return pureText
-
-
-def wordPercent(source, reference):
-	words = countWords(source, reference)
-	percent = (words/len(source))*100
-	return round(percent, 1)
-
-
-def mostCommon(source, reference):
-	source = map(str.lower, source)
-	mostCommonWords = []
-	for word in source:
-		if word in reference:
-			mostCommonWords.append(word)
-
-	mostCommonWords = Counter(mostCommonWords)  # Słownik
-
-	dictList = []
-	for key, value in mostCommonWords.items():  # Lista krotek
-		dictList.append((key, value))
-
-	dictList.sort(key=operator.itemgetter(1), reverse=True)
-
-	shortDictList = []
-	limit = 9
-	for index, item in enumerate(dictList):
-		shortDictList.append(item)
-		if index == limit:
-			break
-	return shortDictList
-
-
-def pieChart(values, labels, title):
-	plt.pie(values, labels=labels,)
-	plt.title(title)
-
-
-def doublePieChart(values, labels, values2, labels2, title):
-	fig, axs = plt.subplots(2)
-	fig.suptitle(title)
-	axs[0].pie(values, labels=labels,)
-	axs[0].set_title('Tekst pierwszy')
-	axs[1].pie(values2, labels=labels2,)
-	axs[1].set_title('Tekst drugi')
-	plt.show()
-
-
-def mostCommonBar(source, reference):
-	dict = mostCommon(source, reference)
-	plt.bar(range(len(dict)), [val[1] for val in dict], align='center')
-	plt.xticks(range(len(dict)), [val[0] for val in dict])
-	plt.xticks(rotation=70)
-
-
-def genAnalysis(source, negWords, posWords):
-	negWordsCount = countWords(source, negWords)
-	posWordsCount = countWords(source, posWords)
-	if negWordsCount > posWordsCount:
-		result = "Tekst jest nacechowany negatywnie"
-	elif negWordsCount < posWordsCount:
-		result = "Tekst jest nacechowany pozytywnie"
-	elif negWordsCount == posWordsCount:
-		result = "Tekst jest neutralny"
-	return result
-
-
-def percentAnalysis(source, negWords, posWords):
-	pos = wordPercent(source, posWords)
-	neg = wordPercent(source, negWords)
-	neut = round(100 - wordPercent(source, posWords) -
-					wordPercent(source, negWords), 1)
-	return pos, neg, neut
-
-
-def results(pos, neg, neut):
-	print("Słowa pozytywne: ", pos, "%", sep='')
-	print("Słowa negatywne: ", neg, "%", sep='')
-	print("Słowa neutralne: ", neut, "%", sep='')
-
-
-def twitter(nick):
-	twitter = open('twitter.txt', 'w', encoding="utf-8")
-	tweetList = []
-	for tweet in get_tweets(nick, pages=5):
-		tweetList.append(tweet['text'])
-
-	twitter.write(str(tweetList))
-	twitter.close()
-					
-				}</span></pre>
-				<button class="codeButton" onclick="codeCopy('code2')">Copy</button>
+					</div>
 				</div>
-				
 			</div>
-		</div>
-	</div>
-    </body>
-    
+</body>
