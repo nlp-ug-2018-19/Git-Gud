@@ -1,182 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel = "stylesheet"
-    type = "text/css"
-	href = "styles.css"/>
-	<link rel="icon" type="image/png" href="favicon.png" sizes="64x64"/>
-	<title>N-grams</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          type="text/css"
+          href="styles.css"/>
+    <link rel="icon" type="image/png" href="favicon.png" sizes="64x64"/>
+    <title>N-grams</title>
 </head>
 <body>
-	<div class="content">
-		<header id="header_section">
-			<div class="logo">
-				<a id="logo_link" href="index.html">NLP Tools</a>
-			</div>
-			<div id="menubar">
-				<ul id="menu">
-					<li class="selected"><a href="index.html">Home</a></li>
-					<li class="dropdown">
-						<a href="Parser.html" class="dropbtn">Parser</a>
-						<div class="dropdown-content" >
-							<a href="Parser.html" class="pars">Parser</a>
-							<a href="Parsercode.html" class="pars">Code</a>
-						</div>
-					</li>
-					<li class="dropdown">
-						<a href="Tagger.html" class="dropbtn">Tagger</a>
-						<div class="dropdown-content" id="tag">
-							<a href="Tagger.html" class="tag">Tagger</a>
-							<a href="Taggercode.html" class="tag">Code</a>
-						</div>
-					</li>
-					<li class="dropdown">
-						<a href="N-grams.html" class="dropbtn">N-grams</a>
-						<div class="dropdown-content" id="ngram">
-							<a href="N-grams.html" class="ngram">N-grams</a>
-							<a href="N-gramscode.html" class="ngram">Code</a>
-						</div>
-					</li>
-					<li><a href="Contact.html">Contact</a></li>
-				</ul>
-			</div>
-		</header>
+<div class="content">
+    <header id="header_section">
+        <div class="logo">
+            <a id="logo_link" href="index.html">NLP Tools</a>
+        </div>
+        <div id="menubar">
+            <ul id="menu">
+                <li class="selected"><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="Parser.html" class="dropbtn">Parser</a>
+                    <div class="dropdown-content">
+                        <a href="Parser.html" class="pars">Parser</a>
+                        <a href="Parsercode.html" class="pars">Code</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="Tagger.html" class="dropbtn">Tagger</a>
+                    <div class="dropdown-content" id="tag">
+                        <a href="Tagger.html" class="tag">Tagger</a>
+                        <a href="Taggercode.html" class="tag">Code</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="N-grams.html" class="dropbtn">N-grams</a>
+                    <div class="dropdown-content" id="ngram">
+                        <a href="N-grams.html" class="ngram">N-grams</a>
+                        <a href="N-gramscode.html" class="ngram">Code</a>
+                    </div>
+                </li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main_app_wrap">
+        <div class="sidenav">
+            <div class="calendar">
+                <div class="month">
+                    <ul>
+                    <li class="prev">&#10094;</li>
+                    <li class="next">&#10095;</li>
+                    <li>June</li>
+                    <li>2020</li>
+                    </ul>
+                </div>
 
-		<div class="main_app_wrap">
-			<div class="sidenav">
-				<div class="calendar">
-					<div class="month">
-						<ul>
-						<li class="prev">&#10094;</li>
-						<li class="next">&#10095;</li>
-						<li>April</li>
-						<li>2020</li>
-						</ul>
-					</div>
+                <div>
+                <ul class="weekdays">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                </ul>
+                
+                <ul class="days">
+                    <li><span class="active">1</span></li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                </ul>
+                </div>
+            </div>	
+        </div>
 
-					<div>
-					<ul class="weekdays">
-						<li>Mo</li>
-						<li>Tu</li>
-						<li>We</li>
-						<li>Th</li>
-						<li>Fr</li>
-						<li>Sa</li>
-						<li>Su</li>
-					</ul>
-					
-					<ul class="days">
-						<li></li>
-						<li></li>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-						<li>5</li>
-						<li>6</li>
-						<li>7</li>
-						<li>8</li>
-						<li>9</li>
-						<li>10</li>
-						<li>11</li>
-						<li>12</li>
-						<li>13</li>
-						<li>14</li>
-						<li>15</li>
-						<li>16</li>
-						<li>17</li>
-						<li>18</li>
-						<li>19</li>
-						<li><span class="active">20</span></li>
-						<li>21</li>
-						<li>22</li>
-						<li>23</li>
-						<li>24</li>
-						<li>25</li>
-						<li>26</li>
-						<li>27</li>
-						<li>28</li>
-						<li>29</li>
-						<li>30</li>
-					</ul>
-					</div>
-				</div>	
-			</div>
-			<div class="main_content">
-				<div class="action_menu">
-					<btn class="action_menu">N-gram</btn>
-					<select class="action_menu">
-						<option>2-grams</option>
-						<option>3-grams</option>
-						<option>4-grams</option>
-						<option>5-grams</option>
-					</select>
-				</div>
-				<!--"app" = some application; Here, it's an N'grammer-->
-				<div class="app">
-					<div class="half1">
-						<div class="input_output_div">
-							Input
-						</div>
-						<textarea class="app_textarea input"></textarea>
-					</div>
-					<div class="separator">
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						&#8594;
-					</div>
-					<div class="half2">
-						<div class="input_output_div">
-							Output
-						</div>
-						<textarea class="app_textarea output"></textarea>
-					</div>
-				</div>
-			</div>
-			<footer>
-				<div class="addresses">
-					<hr>
-					<div class="address_wrap">
-						<div class="address_names">
-							<address>Adrianna Bałabańska</address>
-						</div>
-						<div class="address_emails">
-							<address>(adrianna.balabanska@gmail.com)</address>
-						</div>
-					</div>
-					<div class="address_wrap">
-						<div class="address_names">
-							<address>Marcin Michnik</address>
-						</div>
-						<div class="address_emails">
-							<address>(marcin.michnik@o2.pl)</address>
-						</div>
-					</div>
-					<div class="address_wrap">
-						<div class="address_names">
-							<address>Mateusz Wyszecki</address>
-						</div>
-						<div class="address_emails">
-							<address>(wyszecki.mateusz@gmail.com)</address>
-						</div>
-					</div>
-					<div class="address_wrap">
-						<div class="address_names">
-							<address>Wiktoria Romanowicz</address>
-						</div>
-						<div class="address_emails">
-							<address>(wiktoria.romanowicz@gmail.com)</address>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-	</div>
+        <div class="main_content">
+            <div class="action_menu">
+                <button onclick="nGram()" class="action_menu">N-gram</button>
+                <select class="action_menu" id="idSelect">
+                    <option value="2">2-grams</option>
+                    <option value="3">3-grams</option>
+                    <option value="4">4-grams</option>
+                    <option value="5">5-grams</option>
+                </select>
+            </div>
+
+            <div class="app">
+
+                <div class="half1">
+                    <div class="input_output_div">
+                        Input
+                    </div>
+                    <textarea class="app_textarea input" id="input"></textarea>
+                </div>
+
+                <div class="separator">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    &#8594;
+                </div>
+
+                <div class="half2">
+                    <div class="input_output_div">
+                        Output
+                    </div>
+
+                    <textarea class="app_textarea" id="output">
+
+					</textarea>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="addresses">
+                <hr>
+                <div class="address_wrap">
+                    <div class="address_names">
+                        <address>Adrianna Bałabańska</address>
+                    </div>
+                    <div class="address_emails">
+                        <address>(adrianna.balabanska@gmail.com)</address>
+                    </div>
+                </div>
+                <div class="address_wrap">
+                    <div class="address_names">
+                        <address>Marcin Michnik</address>
+                    </div>
+                    <div class="address_emails">
+                        <address>(marcin.michnik@o2.pl)</address>
+                    </div>
+                </div>
+                <div class="address_wrap">
+                    <div class="address_names">
+                        <address>Mateusz Wyszecki</address>
+                    </div>
+                    <div class="address_emails">
+                        <address>(wyszecki.mateusz@gmail.com)</address>
+                    </div>
+                </div>
+                <div class="address_wrap">
+                    <div class="address_names">
+                        <address>Wiktoria Romanowicz</address>
+                    </div>
+                    <div class="address_emails">
+                        <address>(wiktoria.romanowicz@gmail.com)</address>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<script>
+    function nGram() {
+        let e = document.getElementById("idSelect");
+        let n = e.options[e.selectedIndex].value;
+
+        grams();
+
+        function grams() {
+            let input = document.getElementById('input');
+            var value = input.value;
+
+            var splitTable = [];
+            var nGrams = []
+            var index
+
+            if (value === null || value === undefined) {
+                return nGrams
+            }
+
+            splitTable = value.split(' ');
+            index = splitTable.length - n + 1
+
+            if (index < 1) {
+                return nGrams
+            }
+
+            let i = 0;
+            if (n === '2') {
+                while (index--) {
+                    nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1];
+                    i++;
+                }
+            } else if (n === '3') {
+                while (index--) {
+                    nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2];
+                    i++;
+                }
+            } else if (n === '4') {
+                while (index--) {
+                    nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2] + ' ' + splitTable[i + 3];
+                    i++;
+                }
+            } else if (n === '5') {
+                while (index--) {
+                    nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2] + ' ' + splitTable[i + 3] + ' ' + splitTable[i + 4];
+                    i++;
+                }
+            }
+
+            let output = document.getElementById('output');
+            output.value = nGrams;
+        }
+    }
+</script>
+
 </body>
+
+
