@@ -29,22 +29,22 @@ function nGram() {
         let i = 0;
         if (n === '2') {
             while (index--) {
-                nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1];
+                nGrams[i] = '\n' + splitTable[i] + ' ' + splitTable[i + 1];
                 i++;
             }
         } else if (n === '3') {
             while (index--) {
-                nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2];
+                nGrams[i] = '\n' + splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2];
                 i++;
             }
         } else if (n === '4') {
             while (index--) {
-                nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2] + ' ' + splitTable[i + 3];
+                nGrams[i] = '\n' + splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2] + ' ' + splitTable[i + 3];
                 i++;
             }
         } else if (n === '5') {
             while (index--) {
-                nGrams[i] = splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2] + ' ' + splitTable[i + 3] + ' ' + splitTable[i + 4];
+                nGrams[i] = '\n' + splitTable[i] + ' ' + splitTable[i + 1] + ' ' + splitTable[i + 2] + ' ' + splitTable[i + 3] + ' ' + splitTable[i + 4];
                 i++;
             }
         }

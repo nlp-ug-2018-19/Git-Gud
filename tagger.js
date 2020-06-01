@@ -107,7 +107,9 @@ var dict = {
     "give": "verb",
     "day": "noun",
     "most": "adv",
-    "us": "pron"
+    "us": "pron",
+    "is": "verb",
+    "am": "verb",
 }
 
 function tag(e) {
@@ -135,7 +137,10 @@ function tag(e) {
         else if (temp === "an" || temp === "the" || temp === "a") {
             result.push("'" + words[i] + "'" + " : " + "(noun)");
         }
-        else if ((temp == "is" || temp == "are") && words[i].substr(words[i].length - 3) === "ing") {
+        else if ((temp == "is" || temp == "are" || temp == "were" || temp == "been" || temp == "be") && words[i].substr(words[i].length - 3) === "ing") {
+            result.push("'" + words[i] + "'" + " : " + "(verb)");
+        }
+        else if ((temp == "has" || temp == "have") && (words[i].substr(words[i].length - 2) === "ed" || words[i].substr(words[i].length - 2) === "en")) {
             result.push("'" + words[i] + "'" + " : " + "(verb)");
         }
         else {

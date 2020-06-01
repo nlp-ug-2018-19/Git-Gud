@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 	<link rel="icon" type="image/png" href="favicon.png" sizes="64x64" />
-	<title>NLP Tools</title>
+	<title>N-Grams Code</title>
 </head>
 
 <body>
@@ -117,35 +117,35 @@
 			<div class="main_content">
 				<div class="regular_text">
 					<div class="col-lg-12">
-						<h1>Sample code for Parser/Tager/N-grams</h1>
+						<h1>Source code for the N-grams</h1>
 						<div class="code">
 							<pre>
 								<span id='code2'>
 									function nGram() {
 										let e = document.getElementById("idSelect");
 										let n = e.options[e.selectedIndex].value;
-								
+
 										grams();
-								
+
 										function grams() {
 											let input = document.getElementById('input');
 											var value = input.value;
-								
+
 											var splitTable = [];
 											var nGrams = []
 											var index
-								
+
 											if (value === null || value === undefined) {
 												return nGrams
 											}
-								
+
 											splitTable = value.split(' ');
 											index = splitTable.length - n + 1
-								
+
 											if (index < 1) {
 												return nGrams
 											}
-								
+
 											let i = 0;
 											if (n === '2') {
 												while (index--) {
@@ -168,12 +168,12 @@
 													i++;
 												}
 											}
-								
+
 											let output = document.getElementById('output');
 											output.value = nGrams;
 										}
 									}
-									
+
 									}
 								</span>
 							</pre>
